@@ -19,10 +19,12 @@ Below is a snapshot of visualization of the training data. A more detailed visua
 
 ## Approach for finding our solution
 
+### Pretraining
 * Augment dataset by applying random rotation from -20 degrees to 20 degrees, generates more data to address problems such as overfitting and data skewness
 * Convert data into grayscale, helps reduce computational expense
 * Normalized the data obtained from the previous steps, enable faster computation and enhance generalization of the model
 
+### Model Training
 1. The first model we used is the LeNet model from the LeNet lab assignment. Without any modification, we just plug in data and train. Despite our efforts in experimenting different hyperparameters, the model yields similar accuracy, which is around 89%, on validation dataset every time. Therefore, we can conclude that the model is not complex enough to explain the data. 
 
 2. We continue to use LeNet architecture for our model. However, we decide to greatly increase the depth of each convolution layers in the model hoping to obtain a model that is complex enough to capture all the information provided by the dataset. Not surprisingly, we are able to obtain a much better accuracy, which is around 93%, on validation dataset. However, the model raises another problem. Just after couple epochs, our model has 100% accuracy on the training data, which means that the model is overfitting the train and not generalizing well on test data. So we decided to use dropout technique to reduce overfitting.
