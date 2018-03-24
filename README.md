@@ -34,5 +34,10 @@ Below is a snapshot of visualization of the training data. A more detailed visua
 4. Below is the result we obtained, and it includes accuracy comparison and a plot showing the distribution of incorrected labeled classes
 <img src='visual summary/test results and analysis.png' height="500" width="800"/>
 
+## Performance on new images
+The performance of the final model on new images, which are downloaded from google, is very poor. I deliberately include images from classes that are most incorrected classified by our model. This strongly suggests that we need to include more data from the most incorrected labeled classes in order to achieve higher accuracy for our model.
+
 ## Suggestion on improvment
-As we can see from the above figure, the gap between training accuracy and validation accuracy is still significant compares to the gap between validation and test. This can indicates that a more complex model architecture should be used instead of LeNet in order to gain a better classifier. Potential and promising architectures will be VGG16 ResNet50. 
+1. As we can see from the above figure, the gap between training accuracy and validation accuracy is still significant compares to the gap between validation and test. This can indicates that a more complex model architecture should be used instead of LeNet in order to gain a better classifier. Potential and promising architectures will be VGG16 ResNet50. 
+
+2. We can also deplot test time augmentation known as TTA, as suggested in this [paper](https://arxiv.org/pdf/1502.01852.pdf). TTA works as followed. In order to classify a given image, it will average the predictions on the augmented images of the given image to make a final prediction. 
