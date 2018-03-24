@@ -40,4 +40,4 @@ The performance of the final model on new images, which are downloaded from goog
 ## Suggestion on improvment
 1. As we can see from the above figure, the gap between training accuracy and validation accuracy is still significant compares to the gap between validation and test. This can indicates that a more complex model architecture should be used instead of LeNet in order to gain a better classifier. Potential and promising architectures will be VGG16 ResNet50. 
 
-2. We can also deplot test time augmentation known as TTA, as suggested in this [paper](https://arxiv.org/pdf/1502.01852.pdf). TTA works as followed. In order to classify a given image, it will average the predictions on the augmented images of the given image to make a final prediction. 
+2. We can also deploy test time augmentation known as TTA, as suggested in this [paper](https://arxiv.org/pdf/1502.01852.pdf). TTA works as followed. In order to classify a given image, it will average the predictions on the augmented images of the given image to make a final prediction. 
